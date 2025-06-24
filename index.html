@@ -189,6 +189,7 @@
       action="https://formsubmit.co/kmcneil757@gmail.com"
       method="POST"
     >
+      <input type="hidden" name="_captcha" value="false" />
       <div class="mb-6">
       <label class="block text-gray-700 mb-2" for="name">Your Name</label>
       <input
@@ -265,13 +266,8 @@
             });
           });
         });
-        const form = document.querySelector("form");
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          const formData = new FormData(form);
-          console.log("Form submitted:", Object.fromEntries(formData));
-          form.reset();
-        });
+        // Allow the form to submit normally so FormSubmit can handle sending
+        // the email with the provided form data.
       });
     </script>
   </body>
@@ -645,7 +641,8 @@
               />
             </div>
           </div>
-          <form class="bg-white p-8 rounded-lg shadow-sm">
+          <form action="https://formsubmit.co/kmcneil757@gmail.com" method="POST" class="bg-white p-8 rounded-lg shadow-sm" id="contactForm">
+            <input type="hidden" name="_captcha" value="false" />
             <div class="mb-6">
               <label class="block text-gray-700 mb-2" for="name"
                 >Your Name</label
@@ -653,6 +650,7 @@
               <input
                 type="text"
                 id="name"
+                name="name"
                 class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
                 required
               />
@@ -664,6 +662,7 @@
               <input
                 type="email"
                 id="email"
+                name="email"
                 class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
                 required
               />
@@ -675,6 +674,7 @@
               <input
                 type="text"
                 id="subject"
+                name="subject"
                 class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
                 required
               />
@@ -685,6 +685,7 @@
               >
               <textarea
                 id="message"
+                name="message"
                 rows="4"
                 class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
                 required
@@ -729,13 +730,8 @@
             });
           });
         });
-        const form = document.querySelector("form");
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          const formData = new FormData(form);
-          console.log("Form submitted:", Object.fromEntries(formData));
-          form.reset();
-        });
+        // The contact form posts directly to FormSubmit which handles emailing
+        // the provided information to kmcneil757@gmail.com.
       });
     </script>
   </body>
