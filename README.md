@@ -9,7 +9,7 @@ It is configured to send submissions to **kmcneil757@gmail.com** using the follo
 form tag:
 
 ```html
-<form action="https://formsubmit.co/kmcneil757@gmail.com" method="POST">
+<form action="https://formsubmit.co/d277f87322bdf22fdbdfefc1f943e934" method="POST">
 ```
 
 Each input element includes a `name` attribute so the submitted values are passed
