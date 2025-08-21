@@ -8,6 +8,14 @@ This repository contains the static files for Kelvin McNeil Jr.'s resume website
 - Prominent Download Resume button linking to `Kelvin_McNeil_Jr_Resume.pdf`
 - No contact form (forms were removed)
 
+## Responsive Design
+- **Mobile-first approach** with responsive breakpoints
+- **Collapsible sidebar** on mobile with smooth slide animations
+- **Adaptive typography** and spacing for all screen sizes
+- **Responsive grid layouts** that stack on mobile
+- **Touch-friendly navigation** with mobile menu toggle
+- **Optimized components** for mobile, tablet, and desktop
+
 ## Quick start (local preview)
 ```bash
 # From the repo root
