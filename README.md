@@ -1,17 +1,40 @@
-# Resume
+# Kelvin McNeil Jr. — Resume Website
 
 This repository contains the static files for Kelvin McNeil Jr.'s resume website.
 
-## Contact Form
+## Overview
+- Single-page site built with Tailwind via CDN
+- Highlights, About, Work Experience, Skills, Contact
+- Prominent Download Resume button linking to `Kelvin_McNeil_Jr_Resume.pdf`
+- No contact form (forms were removed)
 
-The contact form in `index.html` submits data via [FormSubmit](https://formsubmit.co/).
-It is configured to send submissions to **kmcneil757@gmail.com** using the following
-form tag:
-
-```html
-<form action="https://formsubmit.co/kmcneil757@gmail.com" method="POST">
+## Quick start (local preview)
+```bash
+# From the repo root
+python3 -m http.server 8000
+# Visit http://localhost:8000
 ```
 
-Each input element includes a `name` attribute so the submitted values are passed
-along. On first use, FormSubmit will send a confirmation email to
-`kmcneil757@gmail.com`. Follow the link in that message to activate future submissions.
+## Updating your resume PDF
+1. Replace the file `Kelvin_McNeil_Jr_Resume.pdf` with your latest PDF (keep the same filename).
+2. Refresh your browser; the Download button will serve the new file.
+
+## Editing content
+- Main page content lives in `index.html`.
+- Supplemental copy/reference lives in `resume.md` (optional helper notes).
+- Images: `IMG_0025.jpeg`, `durham.jpg`.
+
+## Deploying with GitHub Pages
+1. Push changes to `main`.
+2. In GitHub, go to: Settings → Pages.
+3. Set Source to `Deploy from a branch`, select `main` and `/ (root)`.
+4. Save. Your site will be available at the Pages URL shown.
+
+## Repo structure
+```
+├─ index.html                  # Main site
+├─ Kelvin_McNeil_Jr_Resume.pdf # Downloadable resume
+├─ resume.md                   # Supporting notes/content
+├─ IMG_0025.jpeg               # Profile image
+└─ durham.jpg                  # Contact section image
+```
