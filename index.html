@@ -46,7 +46,7 @@
     </style>
   </head>
   <body class="bg-gray-50">
-    <aside class="fixed left-0 top-0 h-screen w-[300px] bg-white shadow-lg flex flex-col items-center p-8">
+    <aside class="fixed left-0 top-0 h-screen w-[300px] bg-white shadow-lg flex flex-col items-center p-8 z-50 transition-transform duration-300 -translate-x-full md:translate-x-0" id="sidebar">
       <div class="relative w-48 h-48 rounded-full overflow-hidden mb-6">
         <img src="IMG_0025.jpeg" class="w-full h-full object-cover" alt="Kelvin McNeil Jr." />
       </div>
@@ -68,64 +68,69 @@
       </div>
     </aside>
 
-    <main class="ml-[300px]">
-      <section id="home" class="min-h-screen bg-gradient-to-r from-blue-50 to-white flex items-center px-20">
+    <!-- Mobile menu toggle -->
+    <button class="fixed top-4 left-4 z-50 md:hidden bg-primary text-white p-2 rounded-button" id="mobileMenuToggle">
+      <i class="ri-menu-line text-xl"></i>
+    </button>
+
+    <main class="ml-0 md:ml-[300px] transition-all duration-300">
+      <section id="home" class="min-h-screen bg-gradient-to-r from-blue-50 to-white flex items-center px-4 md:px-20">
         <div class="max-w-3xl">
-          <h1 class="text-5xl font-bold mb-4">I'm Kelvin McNeil Jr.</h1>
-          <div class="typing-text text-2xl text-primary mb-6">Product Strategist</div>
-          <p class="text-gray-600 leading-relaxed mb-8">
+          <h1 class="text-3xl md:text-5xl font-bold mb-4">I'm Kelvin McNeil Jr.</h1>
+          <div class="typing-text text-xl md:text-2xl text-primary mb-6">Product Strategist</div>
+          <p class="text-gray-600 leading-relaxed mb-8 text-sm md:text-base">
             Product strategist with 10 years taking SaaS from zero to one and beyond. Entrepreneurial builder who explores the unknown and creates from nothing. I thrive in cross-functional teams—aligning product, engineering, legal, and policy—to ship compliant, human-centered outcomes.
           </p>
-          <div class="flex gap-4">
-            <a href="Kelvin_McNeil_Jr_Resume.pdf" download class="group inline-flex items-center gap-2 bg-gradient-to-r from-primary to-[#0f2d56] text-white px-8 py-3 rounded-button shadow-md hover:shadow-lg hover:from-[#0e56a3] hover:to-[#0c2546] transition-all duration-200">
-              <i class="ri-download-2-line text-xl transition-transform group-hover:translate-y-0.5"></i>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="Kelvin_McNeil_Jr_Resume.pdf" download class="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-[#0f2d56] text-white px-6 md:px-8 py-3 rounded-button shadow-md hover:shadow-lg hover:from-[#0e56a3] hover:to-[#0c2546] transition-all duration-200 text-sm md:text-base">
+              <i class="ri-download-2-line text-lg md:text-xl transition-transform group-hover:translate-y-0.5"></i>
               <span>Download Resume</span>
             </a>
-            <a href="#contact" class="bg-primary text-white px-8 py-3 rounded-button hover:bg-blue-600 transition-colors">Let's Connect</a>
+            <a href="#contact" class="bg-primary text-white px-6 md:px-8 py-3 rounded-button hover:bg-blue-600 transition-colors text-center text-sm md:text-base">Let's Connect</a>
           </div>
         </div>
       </section>
 
-      <section id="highlights" class="py-20 px-20 bg-white">
-        <h2 class="text-3xl font-bold mb-12 text-center">Highlights</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-            <h3 class="font-bold text-lg mb-2">Zero-to-One Builder</h3>
-            <p class="text-gray-700">Architected AI/ML solutions on AWS (S3, Bedrock, SageMaker) and deployed FedRAMP/ATO-ready architectures into production.</p>
+      <section id="highlights" class="py-12 md:py-20 px-4 md:px-20 bg-white">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center">Highlights</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+          <div class="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-base md:text-lg mb-2">Zero-to-One Builder</h3>
+            <p class="text-gray-700 text-sm md:text-base">Architected AI/ML solutions on AWS (S3, Bedrock, SageMaker) and deployed FedRAMP/ATO-ready architectures into production.</p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-            <h3 class="font-bold text-lg mb-2">AI for Compliance</h3>
-            <p class="text-gray-700">Designed and deployed LLM workflows using AWS Bedrock with Anthropic Claude 3.5 Sonnet—distilling executive orders, parsing grant documents, and applying schema validation for compliance outputs.</p>
+          <div class="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-base md:text-lg mb-2">AI for Compliance</h3>
+            <p class="text-gray-700 text-sm md:text-base">Designed and deployed LLM workflows using AWS Bedrock with Anthropic Claude 3.5 Sonnet—distilling executive orders, parsing grant documents, and applying schema validation for compliance outputs.</p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-            <h3 class="font-bold text-lg mb-2">Product & Funding</h3>
-            <p class="text-gray-700">Raised $20M+ in interagency funding and delivered phased, budget-conscious solutions across 16 federal agencies.</p>
+          <div class="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-base md:text-lg mb-2">Product & Funding</h3>
+            <p class="text-gray-700 text-sm md:text-base">Raised $20M+ in interagency funding and delivered phased, budget-conscious solutions across 16 federal agencies.</p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-            <h3 class="font-bold text-lg mb-2">Personal Project</h3>
-            <p class="text-gray-700">Co-building a real estate SaaS MVP (Ruby on Rails, PostgreSQL, Tailwind) focused on transaction workflow automation.</p>
+          <div class="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-base md:text-lg mb-2">Personal Project</h3>
+            <p class="text-gray-700 text-sm md:text-base">Co-building a real estate SaaS MVP (Ruby on Rails, PostgreSQL, Tailwind) focused on transaction workflow automation.</p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-            <h3 class="font-bold text-lg mb-2">Legacy Modernization</h3>
-            <p class="text-gray-700">Modernized legacy applications and codebases—decomposed monoliths, designed stepwise migrations, and reduced risk while improving reliability and delivery speed.</p>
+          <div class="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-base md:text-lg mb-2">Legacy Modernization</h3>
+            <p class="text-gray-700 text-sm md:text-base">Modernized legacy applications and codebases—decomposed monoliths, designed stepwise migrations, and reduced risk while improving reliability and delivery speed.</p>
           </div>
-          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-            <h3 class="font-bold text-lg mb-2">Backlog Refinement / Product Roadmaps</h3>
-            <p class="text-gray-700">Led backlog refinement, MVP definition, and PI Planning across 16 Scrum teams; aligned roadmaps to outcomes, budgets, and KPIs for predictable delivery.</p>
+          <div class="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-base md:text-lg mb-2">Backlog Refinement / Product Roadmaps</h3>
+            <p class="text-gray-700 text-sm md:text-base">Led backlog refinement, MVP definition, and PI Planning across 16 Scrum teams; aligned roadmaps to outcomes, budgets, and KPIs for predictable delivery.</p>
           </div>
         </div>
       </section>
 
-      <section id="about" class="py-20 px-20 bg-white">
-        <h2 class="text-3xl font-bold mb-12 text-center">About Me</h2>
-        <div class="grid grid-cols-2 gap-12">
+      <section id="about" class="py-12 md:py-20 px-4 md:px-20 bg-white">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center">About Me</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div>
             <img src="IMG_0025.jpeg" class="rounded-lg shadow-lg w-full" alt="About Kelvin" />
           </div>
           <div>
-            <h3 class="text-2xl font-bold mb-4">Product Strategist & Innovation Specialist</h3>
-            <p class="text-gray-600 mb-6 leading-relaxed">I specialize in developing and implementing product strategies that accelerate business growth and deliver measurable outcomes for users. My approach blends market analysis, user research, and experimentation with pragmatic delivery plans that respect budget and compliance constraints. I translate complex policy and technical requirements into simple, testable milestones; design lean MVPs that validate value quickly; and scale with clear KPIs, governance, and feedback loops. I work closely with engineering to align architecture with product objectives, using data to prioritize, de-risk, and iterate toward outcomes. I also have deep experience modernizing legacy applications—untangling legacy code, decomposing monoliths, and delivering stepwise, low-risk migrations.</p>
-            <div class="grid grid-cols-2 gap-6 mb-8">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">Product Strategist & Innovation Specialist</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">I specialize in developing and implementing product strategies that accelerate business growth and deliver measurable outcomes for users. My approach blends market analysis, user research, and experimentation with pragmatic delivery plans that respect budget and compliance constraints. I translate complex policy and technical requirements into simple, testable milestones; design lean MVPs that validate value quickly; and scale with clear KPIs, governance, and feedback loops. I work closely with engineering to align architecture with product objectives, using data to prioritize, de-risk, and iterate toward outcomes. I also have deep experience modernizing legacy applications—untangling legacy code, decomposing monoliths, and delivering stepwise, low-risk migrations.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-8">
               <div>
                 <p class="font-bold">Experience:</p>
                 <p class="text-gray-600">10 Years</p>
@@ -139,18 +144,18 @@
         </div>
       </section>
 
-      <section id="experience" class="py-20 px-20 bg-gray-50">
-        <h2 class="text-3xl font-bold mb-12 text-center">Work Experience</h2>
-        <div class="max-w-4xl mx-auto space-y-8">
-          <div class="bg-white p-8 rounded-lg shadow-sm">
-            <div class="flex justify-between items-start mb-4">
+      <section id="experience" class="py-12 md:py-20 px-4 md:px-20 bg-gray-50">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center">Work Experience</h2>
+        <div class="max-w-4xl mx-auto space-y-6 md:space-y-8">
+          <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
               <div>
-                <h3 class="text-xl font-bold">Director of Product Strategy</h3>
+                <h3 class="text-lg md:text-xl font-bold">Director of Product Strategy</h3>
                 <p class="text-primary">Guidehouse Inc.</p>
               </div>
-              <span class="text-gray-500">12/2020 – Present</span>
+              <span class="text-gray-500 text-sm">12/2020 – Present</span>
             </div>
-            <ul class="list-disc list-inside text-gray-600 space-y-2">
+            <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm md:text-base">
               <li>Lead the overall product vision and roadmap for GrantSolutions, building phased delivery strategies that allow agencies to pivot with political and policy shifts.</li>
               <li>Partner with the Department of Government Efficiency (DOGE) to consolidate and modernize grant management systems, positioning GrantSolutions as a core shared service offering.</li>
               <li>Collaborate across product, engineering, legal, and policy teams to design solutions that meet federal requirements while delivering a human-centered end-user experience.</li>
@@ -161,45 +166,45 @@
               <li>Owned backlog refinement, MVP definition, and PI Planning across 16 Scrum teams.</li>
             </ul>
           </div>
-          <div class="bg-white p-8 rounded-lg shadow-sm">
-            <div class="flex justify-between items-start mb-4">
+          <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
               <div>
-                <h3 class="text-xl font-bold">Account Director | Product Manager</h3>
+                <h3 class="text-lg md:text-xl font-bold">Account Director | Product Manager</h3>
                 <p class="text-primary">Dovel Technologies LLC</p>
               </div>
-              <span class="text-gray-500">03/2018 – 11/2020</span>
+              <span class="text-gray-500 text-sm">03/2018 – 11/2020</span>
             </div>
-            <ul class="list-disc list-inside text-gray-600 space-y-2">
-              <li>Served as Product Manager for CDC’s grants portfolio, managing backlog items while balancing urgent pandemic aid distribution.</li>
-              <li>Scoped and delivered an MVP migration plan to transfer the $80M ONDCP Drug-Free Communities Program into CDC’s portfolio.</li>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm md:text-base">
+              <li>Served as Product Manager for CDC's grants portfolio, managing backlog items while balancing urgent pandemic aid distribution.</li>
+              <li>Scoped and delivered an MVP migration plan to transfer the $80M ONDCP Drug-Free Communities Program into CDC's portfolio.</li>
               <li>Led backlog refinement sessions with CDC and NIH stakeholders, prioritizing integrations and features supporting $8.5B in obligations and 14,000+ awards annually.</li>
               <li>Coordinated with engineering to design API-driven data flows across NIH/CDC systems, enabling real-time portfolio management.</li>
               <li>Raised $3M in development funding to support roadmap initiatives.</li>
             </ul>
           </div>
-          <div class="bg-white p-8 rounded-lg shadow-sm">
-            <div class="flex justify-between items-start mb-4">
+          <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
               <div>
-                <h3 class="text-xl font-bold">Product Analyst</h3>
+                <h3 class="text-lg md:text-xl font-bold">Product Analyst</h3>
                 <p class="text-primary">Octo Consulting Group</p>
               </div>
-              <span class="text-gray-500">01/2017 – 03/2018</span>
+              <span class="text-gray-500 text-sm">01/2017 – 03/2018</span>
             </div>
-            <ul class="list-disc list-inside text-gray-600 space-y-2">
-              <li>Supported SEC’s MIDAS platform, refining backlog items tied to analysis of 1B+ equity exchange records.</li>
+            <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm md:text-base">
+              <li>Supported SEC's MIDAS platform, refining backlog items tied to analysis of 1B+ equity exchange records.</li>
               <li>Collaborated with compliance and engineering teams to define user stories for dashboards and visualization tools.</li>
               <li>Researched and evaluated crypto compliance monitoring tools, influencing SEC Cyber Unit roadmap direction.</li>
             </ul>
           </div>
-          <div class="bg-white p-8 rounded-lg shadow-sm">
-            <div class="flex justify-between items-start mb-4">
+          <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
               <div>
-                <h3 class="text-xl font-bold">Business Analyst | Associate Product Owner</h3>
+                <h3 class="text-lg md:text-xl font-bold">Business Analyst | Associate Product Owner</h3>
                 <p class="text-primary">Dovel Technologies, LLC</p>
               </div>
-              <span class="text-gray-500">09/2015 – 12/2016</span>
+              <span class="text-gray-500 text-sm">09/2015 – 12/2016</span>
             </div>
-            <ul class="list-disc list-inside text-gray-600 space-y-2">
+            <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm md:text-base">
               <li>Supported Product Owner role for the Head Start Enterprise System (HSES) integration project.</li>
               <li>Co-defined MVP scope for a $5M investment, delivering the core web-service interface before layering in advanced features.</li>
               <li>Conducted requirement workshops, backlog grooming, and user testing sessions with OHS stakeholders.</li>
@@ -208,39 +213,39 @@
         </div>
       </section>
 
-      <section id="skills" class="py-20 px-20 bg-white">
-        <h2 class="text-3xl font-bold mb-12 text-center">Skills</h2>
-        <div class="grid grid-cols-2 gap-12 max-w-4xl mx-auto">
+      <section id="skills" class="py-12 md:py-20 px-4 md:px-20 bg-white">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center">Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
           <div>
-            <h3 class="text-xl font-bold mb-6">Technical</h3>
+            <h3 class="text-lg md:text-xl font-bold mb-6">Technical</h3>
             <div class="space-y-6">
               <div>
-                <div class="flex justify-between mb-2"><span class="font-medium">Python / Ruby on Rails</span><span>80%</span></div>
+                <div class="flex justify-between mb-2"><span class="font-medium text-sm md:text-base">Python / Ruby on Rails</span><span class="text-sm md:text-base">80%</span></div>
                 <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 80%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2"><span class="font-medium">Artificial Intelligence</span><span>90%</span></div>
+                <div class="flex justify-between mb-2"><span class="font-medium text-sm md:text-base">Artificial Intelligence</span><span class="text-sm md:text-base">90%</span></div>
                 <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 90%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2"><span class="font-medium">Data Analysis</span><span>85%</span></div>
+                <div class="flex justify-between mb-2"><span class="font-medium text-sm md:text-base">Data Analysis</span><span class="text-sm md:text-base">85%</span></div>
                 <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 85%"></div></div>
               </div>
             </div>
           </div>
           <div>
-            <h3 class="text-xl font-bold mb-6">Soft Skills</h3>
+            <h3 class="text-lg md:text-xl font-bold mb-6">Soft Skills</h3>
             <div class="space-y-6">
               <div>
-                <div class="flex justify-between mb-2"><span class="font-medium">Public Speaking</span><span>90%</span></div>
+                <div class="flex justify-between mb-2"><span class="font-medium text-sm md:text-base">Public Speaking</span><span class="text-sm md:text-base">90%</span></div>
                 <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 90%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2"><span class="font-medium">Teamwork</span><span>100%</span></div>
+                <div class="flex justify-between mb-2"><span class="font-medium text-sm md:text-base">Teamwork</span><span class="text-sm md:text-base">100%</span></div>
                 <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 100%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2"><span class="font-medium">Problem Solving</span><span>88%</span></div>
+                <div class="flex justify-between mb-2"><span class="font-medium text-sm md:text-base">Problem Solving</span><span class="text-sm md:text-base">88%</span></div>
                 <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 88%"></div></div>
               </div>
             </div>
@@ -248,34 +253,34 @@
         </div>
       </section>
 
-      <section id="contact" class="py-20 px-20 bg-gray-50">
-        <h2 class="text-3xl font-bold mb-12 text-center">Contact</h2>
-        <div class="max-w-4xl mx-auto grid grid-cols-1 gap-12">
-          <div class="bg-white p-8 rounded-lg shadow-sm">
+      <section id="contact" class="py-12 md:py-20 px-4 md:px-20 bg-gray-50">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center">Contact</h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 gap-8 md:gap-12">
+          <div class="bg-white p-6 md:p-8 rounded-lg shadow-sm">
             <div class="flex items-center gap-4 mb-6">
-              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"><i class="ri-map-pin-line text-primary"></i></div>
+              <div class="w-10 md:w-12 h-10 md:h-12 bg-primary/10 rounded-full flex items-center justify-center"><i class="ri-map-pin-line text-primary"></i></div>
               <div>
-                <h3 class="font-bold">Location</h3>
-                <p class="text-gray-600">Raleigh-Durham, North Carolina</p>
+                <h3 class="font-bold text-sm md:text-base">Location</h3>
+                <p class="text-gray-600 text-sm md:text-base">Raleigh-Durham, North Carolina</p>
               </div>
             </div>
             <div class="flex items-center gap-4 mb-6">
-              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"><i class="ri-mail-line text-primary"></i></div>
+              <div class="w-10 md:w-12 h-10 md:h-12 bg-primary/10 rounded-full flex items-center justify-center"><i class="ri-mail-line text-primary"></i></div>
               <div>
-                <h3 class="font-bold">Email</h3>
-                <p class="text-gray-600"><a href="mailto:kmcneil757@gmail.com" class="text-primary hover:underline">kmcneil757@gmail.com</a></p>
+                <h3 class="font-bold text-sm md:text-base">Email</h3>
+                <p class="text-gray-600 text-sm md:text-base"><a href="mailto:kmcneil757@gmail.com" class="text-primary hover:underline">kmcneil757@gmail.com</a></p>
               </div>
             </div>
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"><i class="ri-phone-line text-primary"></i></div>
+              <div class="w-10 md:w-12 h-10 md:h-12 bg-primary/10 rounded-full flex items-center justify-center"><i class="ri-phone-line text-primary"></i></div>
               <div>
-                <h3 class="font-bold">Phone</h3>
-                <p class="text-gray-600">757-719-3390</p>
+                <h3 class="font-bold text-sm md:text-base">Phone</h3>
+                <p class="text-gray-600 text-sm md:text-base">757-719-3390</p>
               </div>
             </div>
           </div>
           <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-            <img src="durham.jpg" class="w-full h-48 object-cover" alt="Durham" />
+            <img src="durham.jpg" class="w-full h-32 md:h-48 object-cover" alt="Durham" />
           </div>
         </div>
       </section>
@@ -285,12 +290,40 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const backToTop = document.getElementById("backToTop");
-        window.addEventListener("scroll", () => { backToTop.style.opacity = window.scrollY > 300 ? "1" : "0"; });
-        backToTop.addEventListener("click", (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+        const sidebar = document.getElementById("sidebar");
+        const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+        
+        // Mobile menu toggle
+        mobileMenuToggle.addEventListener("click", () => {
+          sidebar.classList.toggle("-translate-x-full");
+        });
+        
+        // Close sidebar when clicking on a nav link (mobile)
+        document.querySelectorAll('aside a[href^="#"]').forEach(link => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth < 768) {
+              sidebar.classList.add("-translate-x-full");
+            }
+          });
+        });
+        
+        // Back to top functionality
+        window.addEventListener("scroll", () => { 
+          backToTop.style.opacity = window.scrollY > 300 ? "1" : "0"; 
+        });
+        
+        backToTop.addEventListener("click", (e) => { 
+          e.preventDefault(); 
+          window.scrollTo({ top: 0, behavior: "smooth" }); 
+        });
+        
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
           anchor.addEventListener("click", function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+            document.querySelector(this.getAttribute("href")).scrollIntoView({ 
+              behavior: "smooth" 
+            });
           });
         });
       });
