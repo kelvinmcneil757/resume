@@ -40,358 +40,105 @@
       rel="stylesheet"
     />
     <style>
-      :where([class^="ri-"])::before { content: "\f3c2"; }
-      @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-      }
-      .typing-text {
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 3.5s steps(40, end);
-      }
-      .progress-bar {
-      transition: width 1s ease-in-out;
-      }
+      @keyframes typing { from { width: 0 } to { width: 100% } }
+      .typing-text { overflow: hidden; white-space: nowrap; animation: typing 3.5s steps(40, end); }
+      .progress-bar { transition: width 1s ease-in-out; }
     </style>
   </head>
   <body class="bg-gray-50">
-    <aside
-      class="fixed left-0 top-0 h-screen w-[300px] bg-white shadow-lg flex flex-col items-center p-8"
-    >
+    <aside class="fixed left-0 top-0 h-screen w-[300px] bg-white shadow-lg flex flex-col items-center p-8">
       <div class="relative w-48 h-48 rounded-full overflow-hidden mb-6">
-        <img
-          src="<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kelvin McNeil Jr. - Product Strategist</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#0563bb",
-              secondary: "#173b6c",
-            },
-            borderRadius: {
-              none: "0px",
-              sm: "4px",
-              DEFAULT: "8px",
-              md: "12px",
-              lg: "16px",
-              xl: "20px",
-              "2xl": "24px",
-              "3xl": "32px",
-              full: "9999px",
-              button: "8px",
-            },
-          },
-        },
-      };
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      :where([class^="ri-"])::before { content: "\f3c2"; }
-      @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-      }
-      .typing-text {
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 3.5s steps(40, end);
-      }
-      .progress-bar {
-      transition: width 1s ease-in-out;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50">
-    <aside
-      class="fixed left-0 top-0 h-screen w-[300px] bg-white shadow-lg flex flex-col items-center p-8"
-    >
-      <div class="relative w-48 h-48 rounded-full overflow-hidden mb-6">
-        <img
-          src="IMG_0025.jpeg"
-          class="w-full h-full object-cover"
-          alt="Kelvin McNeil Jr."
-        />
+        <img src="IMG_0025.jpeg" class="w-full h-full object-cover" alt="Kelvin McNeil Jr." />
       </div>
       <h1 class="text-2xl font-bold text-secondary mb-2">Kelvin McNeil Jr.</h1>
       <p class="text-primary mb-8">Director, Product Strategy</p>
       <nav class="w-full">
         <ul class="space-y-4">
-          <li>
-            <a
-              href="#home"
-              class="flex items-center gap-3 text-gray-600 hover:text-primary"
-              ><i class="ri-home-line"></i> Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="#about"
-              class="flex items-center gap-3 text-gray-600 hover:text-primary"
-              ><i class="ri-user-line"></i> About</a
-            >
-          </li>
-          <li>
-            <a
-              href="#experience"
-              class="flex items-center gap-3 text-gray-600 hover:text-primary"
-              ><i class="ri-briefcase-line"></i> Experience</a
-            >
-          </li>
-          <li>
-            <a
-              href="#skills"
-              class="flex items-center gap-3 text-gray-600 hover:text-primary"
-              ><i class="ri-award-line"></i> Skills</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contact"
-              class="flex items-center gap-3 text-gray-600 hover:text-primary"
-              ><i class="ri-mail-line"></i> Contact</a
-            >
-          </li>
+          <li><a href="#home" class="flex items-center gap-3 text-gray-600 hover:text-primary"><i class="ri-home-line"></i> Home</a></li>
+          <li><a href="#highlights" class="flex items-center gap-3 text-gray-600 hover:text-primary"><i class="ri-star-line"></i> Highlights</a></li>
+          <li><a href="#about" class="flex items-center gap-3 text-gray-600 hover:text-primary"><i class="ri-user-line"></i> About</a></li>
+          <li><a href="#experience" class="flex items-center gap-3 text-gray-600 hover:text-primary"><i class="ri-briefcase-line"></i> Experience</a></li>
+          <li><a href="#skills" class="flex items-center gap-3 text-gray-600 hover:text-primary"><i class="ri-award-line"></i> Skills</a></li>
+          <li><a href="#contact" class="flex items-center gap-3 text-gray-600 hover:text-primary"><i class="ri-mail-line"></i> Contact</a></li>
         </ul>
       </nav>
       <div class="mt-auto flex gap-4">
-        <a
-          href="https://www.linkedin.com/in/kelvin-mcneil-jr/"
-          class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
-          ><i class="ri-linkedin-line"></i
-        ></a>
-        <a
-          href="https://github.com/kelvinmcneil757"
-          target="_blank"
-          class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
-          ><i class="ri-github-line"></i
-        ></a>
+        <a href="https://www.linkedin.com/in/kelvin-mcneil-jr/" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"><i class="ri-linkedin-line"></i></a>
+        <a href="https://github.com/kelvinmcneil757" target="_blank" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"><i class="ri-github-line"></i></a>
       </div>
     </aside>
-    <form
-      class="bg-white p-8 rounded-lg shadow-sm"
-      action="https://formsubmit.co/kmcneil757@gmail.com"
-      method="POST"
-    >
-      <input type="hidden" name="_captcha" value="false" />
-      <div class="mb-6">
-      <label class="block text-gray-700 mb-2" for="name">Your Name</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
-        required
-      />
-      </div>
-      <div class="mb-6">
-      <label class="block text-gray-700 mb-2" for="email">Your Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
-        required
-      />
-      </div>
-      <div class="mb-6">
-      <label class="block text-gray-700 mb-2" for="subject">Subject</label>
-      <input
-        type="text"
-        id="subject"
-        name="subject"
-        class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
-        required
-      />
-      </div>
-      <div class="mb-6">
-      <label class="block text-gray-700 mb-2" for="message">Message</label>
-      <textarea
-        id="message"
-        name="message"
-        rows="4"
-        class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
-        required
-      ></textarea>
-      </div>
-      <button
-      type="submit"
-      class="w-full bg-primary text-white py-3 rounded-button hover:bg-blue-600 transition-colors"
-      >
-      Send Message
-      </button>
-    </form>
-    <a
-      href="#"
-      id="backToTop"
-      class="fixed bottom-8 right-8 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer"
-    >
-      <i class="ri-arrow-up-line"></i>
-    </a>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const backToTop = document.getElementById("backToTop");
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 300) {
-            backToTop.style.opacity = "1";
-          } else {
-            backToTop.style.opacity = "0";
-          }
-        });
-        backToTop.addEventListener("click", (e) => {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-              behavior: "smooth",
-            });
-          });
-        });
-        // Allow the form to submit normally so FormSubmit can handle sending
-        // the email with the provided form data.
-      });
-    </script>
-  </body>
-</html>
-"
-          class="w-full h-full object-cover"
-          alt="Kelvin McNeil Jr."
-        />
-      </div>
-      <h1 class="text-2xl font-bold text-secondary mb-2">Kelvin McNeil Jr.</h1>
-      <p class="text-primary mb-8">Director, Product Strategy</p>
-      <nav class="w-full">
-        <ul class="space-y-4">
-          <li>
-            <a
-              href="#home"
-              class="flex items-center gap-3 text-gray-600 hover:text-primary"
-              ><i class="ri-home-line"></i> Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="#about"
-              class="flex items-center gap-3 text-gray-600 hover:text-primary"
-              ><i class="ri-user-line"></i> About</a
-            >
-          </li>
-          <li>
-            <a
-              href="#experience"
-              class="flex items-center gap-3 text-gray-600 hover:text-primary"
-              ><i class="ri-briefcase-line"></i> Experience</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contact"
-              class="flex items-center gap-3 text-gray-600 hover:text-primary"
-              ><i class="ri-mail-line"></i> Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <div class="mt-auto flex gap-4">
-        <a
-          href="https://www.linkedin.com/in/kelvin-mcneil-jr/"
-          class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
-          ><i class="ri-linkedin-line"></i
-        ></a>
-        <a
-          href="https://github.com/kelvinmcneil757"
-          target="_blank"
-          class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary"
-          ><i class="ri-github-line"></i
-        ></a>
-      </div>
-    </aside>
+
     <main class="ml-[300px]">
-      <section
-        id="home"
-        class="min-h-screen bg-gradient-to-r from-blue-50 to-white flex items-center px-20"
-      >
+      <section id="home" class="min-h-screen bg-gradient-to-r from-blue-50 to-white flex items-center px-20">
         <div class="max-w-3xl">
           <h1 class="text-5xl font-bold mb-4">I'm Kelvin McNeil Jr.</h1>
-          <div class="typing-text text-2xl text-primary mb-6">
-            Product Strategist
-          </div>
+          <div class="typing-text text-2xl text-primary mb-6">Product Strategist</div>
           <p class="text-gray-600 leading-relaxed mb-8">
-            Seasoned product strategy professional with 8 years of experience in
-            scaling SaaS products from ideation to market success. Proven track
-            record of raising $25M+ in funding and leading cross-functional
-            teams to deliver innovative solutions. Specialized in developing
-            strategic product roadmaps, conducting market analysis, and working
-            closely with stakeholders to align product vision with business
-            objectives.
+            Product strategist with 10 years taking SaaS from zero to one and beyond. Entrepreneurial builder who explores the unknown and creates from nothing. I thrive in cross-functional teams—aligning product, engineering, legal, and policy—to ship compliant, human-centered outcomes.
           </p>
-          <a
-            href="#contact"
-            class="bg-primary text-white px-8 py-3 rounded-button hover:bg-blue-600 transition-colors"
-            >Let's Connect</a
-          >
+          <div class="flex gap-4">
+            <a href="Kelvin_McNeil_Jr_Resume.pdf" download class="group inline-flex items-center gap-2 bg-gradient-to-r from-primary to-[#0f2d56] text-white px-8 py-3 rounded-button shadow-md hover:shadow-lg hover:from-[#0e56a3] hover:to-[#0c2546] transition-all duration-200">
+              <i class="ri-download-2-line text-xl transition-transform group-hover:translate-y-0.5"></i>
+              <span>Download Resume</span>
+            </a>
+            <a href="#contact" class="bg-primary text-white px-8 py-3 rounded-button hover:bg-blue-600 transition-colors">Let's Connect</a>
+          </div>
         </div>
       </section>
+
+      <section id="highlights" class="py-20 px-20 bg-white">
+        <h2 class="text-3xl font-bold mb-12 text-center">Highlights</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-lg mb-2">Zero-to-One Builder</h3>
+            <p class="text-gray-700">Architected AI/ML solutions on AWS (S3, Bedrock, SageMaker) and deployed FedRAMP/ATO-ready architectures into production.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-lg mb-2">AI for Compliance</h3>
+            <p class="text-gray-700">Designed and deployed LLM workflows using AWS Bedrock with Anthropic Claude 3.5 Sonnet—distilling executive orders, parsing grant documents, and applying schema validation for compliance outputs.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-lg mb-2">Product & Funding</h3>
+            <p class="text-gray-700">Raised $20M+ in interagency funding and delivered phased, budget-conscious solutions across 16 federal agencies.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-lg mb-2">Personal Project</h3>
+            <p class="text-gray-700">Co-building a real estate SaaS MVP (Ruby on Rails, PostgreSQL, Tailwind) focused on transaction workflow automation.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-lg mb-2">Legacy Modernization</h3>
+            <p class="text-gray-700">Modernized legacy applications and codebases—decomposed monoliths, designed stepwise migrations, and reduced risk while improving reliability and delivery speed.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 class="font-bold text-lg mb-2">Backlog Refinement / Product Roadmaps</h3>
+            <p class="text-gray-700">Led backlog refinement, MVP definition, and PI Planning across 16 Scrum teams; aligned roadmaps to outcomes, budgets, and KPIs for predictable delivery.</p>
+          </div>
+        </div>
+      </section>
+
       <section id="about" class="py-20 px-20 bg-white">
         <h2 class="text-3xl font-bold mb-12 text-center">About Me</h2>
         <div class="grid grid-cols-2 gap-12">
           <div>
-            <img
-              src="IMG_0025.jpeg"
-              class="rounded-lg shadow-lg w-full"
-              alt="About John"
-            />
+            <img src="IMG_0025.jpeg" class="rounded-lg shadow-lg w-full" alt="About Kelvin" />
           </div>
           <div>
-            <h3 class="text-2xl font-bold mb-4">
-              Product Strategist & Innovation Specialist
-            </h3>
-            <p class="text-gray-600 mb-6 leading-relaxed">
-              I specialize in developing and implementing product strategies
-              that drive business growth and user satisfaction. My approach
-              combines data-driven decision making with creative problem-solving
-              to deliver exceptional results.
-            </p>
+            <h3 class="text-2xl font-bold mb-4">Product Strategist & Innovation Specialist</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">I specialize in developing and implementing product strategies that accelerate business growth and deliver measurable outcomes for users. My approach blends market analysis, user research, and experimentation with pragmatic delivery plans that respect budget and compliance constraints. I translate complex policy and technical requirements into simple, testable milestones; design lean MVPs that validate value quickly; and scale with clear KPIs, governance, and feedback loops. I work closely with engineering to align architecture with product objectives, using data to prioritize, de-risk, and iterate toward outcomes. I also have deep experience modernizing legacy applications—untangling legacy code, decomposing monoliths, and delivering stepwise, low-risk migrations.</p>
             <div class="grid grid-cols-2 gap-6 mb-8">
               <div>
-                <p class="font-bold">Birthday:</p>
-                <p class="text-gray-600">20 April 1990</p>
-              </div>
-              <div>
                 <p class="font-bold">Experience:</p>
-                <p class="text-gray-600">8+ Years</p>
+                <p class="text-gray-600">10 Years</p>
               </div>
               <div>
                 <p class="font-bold">Location:</p>
-                <p class="text-gray-600">Raleigh-Durham North Carolina</p>
-              </div>
-              <div>
-                <p class="font-bold">Projects:</p>
-                <p class="text-gray-600">50+ Completed</p>
+                <p class="text-gray-600">Raleigh-Durham, North Carolina</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section id="experience" class="py-20 px-20 bg-gray-50">
         <h2 class="text-3xl font-bold mb-12 text-center">Work Experience</h2>
         <div class="max-w-4xl mx-auto space-y-8">
@@ -399,155 +146,85 @@
             <div class="flex justify-between items-start mb-4">
               <div>
                 <h3 class="text-xl font-bold">Director of Product Strategy</h3>
-                <p class="text-primary">Guidehouse</p>
+                <p class="text-primary">Guidehouse Inc.</p>
               </div>
-              <span class="text-gray-500">Dec 2021 - Present</span>
+              <span class="text-gray-500">12/2020 – Present</span>
             </div>
             <ul class="list-disc list-inside text-gray-600 space-y-2">
-              <li>
-                Developed comprehensive product strategies aligned with market
-                trends and customer needs
-              </li>
-              <li>
-                Led cross-functional teams in implementing innovative solutions
-                for government and commercial clients
-              </li>
-              <li>
-                Established metrics-driven framework for product development and
-                optimization
-              </li>
-              <li>
-                Created strategic partnerships to expand product capabilities
-                and market reach
-              </li>
+              <li>Lead the overall product vision and roadmap for GrantSolutions, building phased delivery strategies that allow agencies to pivot with political and policy shifts.</li>
+              <li>Partner with the Department of Government Efficiency (DOGE) to consolidate and modernize grant management systems, positioning GrantSolutions as a core shared service offering.</li>
+              <li>Collaborate across product, engineering, legal, and policy teams to design solutions that meet federal requirements while delivering a human-centered end-user experience.</li>
+              <li>Architected and piloted a chatbot solution leveraging AWS Bedrock + Claude Sonnet 3.5 with canned responses to balance inference costs and accuracy.</li>
+              <li>Built Python-based pipelines monitoring compliance across $300B+ in annual federal grant obligations; AWS Redshift/Tableau to deliver executive dashboards highlighting potential noncompliance.</li>
+              <li>Led FedRAMP/ATO security boundary reviews to ensure microservices met compliance standards.</li>
+              <li>Coordinated usability testing and requirement validation with 200+ end users, creating a library of 70+ user-driven design mockups.</li>
+              <li>Owned backlog refinement, MVP definition, and PI Planning across 16 Scrum teams.</li>
             </ul>
           </div>
           <div class="bg-white p-8 rounded-lg shadow-sm">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h3 class="text-xl font-bold">Product Strategist</h3>
-                <p class="text-primary">Dovel Technologies</p>
+                <h3 class="text-xl font-bold">Account Director | Product Manager</h3>
+                <p class="text-primary">Dovel Technologies LLC</p>
               </div>
-              <span class="text-gray-500">Nov 2020 - Dec 2021</span>
+              <span class="text-gray-500">03/2018 – 11/2020</span>
             </div>
             <ul class="list-disc list-inside text-gray-600 space-y-2">
-              <li>
-                Led the overall product vision and developed tailored roadmaps
-                for Partner needs
-              </li>
-              <li>
-                Collaborated with Technology Services to evaluate and implement
-                new technologies, enhancing product offerings
-              </li>
-              <li>
-                Directed the expansion of grant management offerings and
-                decommissioning of legacy systems
-              </li>
-              <li>
-                Conducted usability testing sessions and requirement elicitation
-                sessions, promoting human-centered design
-              </li>
+              <li>Served as Product Manager for CDC’s grants portfolio, managing backlog items while balancing urgent pandemic aid distribution.</li>
+              <li>Scoped and delivered an MVP migration plan to transfer the $80M ONDCP Drug-Free Communities Program into CDC’s portfolio.</li>
+              <li>Led backlog refinement sessions with CDC and NIH stakeholders, prioritizing integrations and features supporting $8.5B in obligations and 14,000+ awards annually.</li>
+              <li>Coordinated with engineering to design API-driven data flows across NIH/CDC systems, enabling real-time portfolio management.</li>
+              <li>Raised $3M in development funding to support roadmap initiatives.</li>
             </ul>
           </div>
           <div class="bg-white p-8 rounded-lg shadow-sm">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h3 class="text-xl font-bold">Consultant / Data Analyst</h3>
+                <h3 class="text-xl font-bold">Product Analyst</h3>
                 <p class="text-primary">Octo Consulting Group</p>
               </div>
-              <span class="text-gray-500">Jan 2017 - Mar 2018</span>
+              <span class="text-gray-500">01/2017 – 03/2018</span>
             </div>
             <ul class="list-disc list-inside text-gray-600 space-y-2">
-              <li>
-                Analyzed large datasets using SQL to identify trends and
-                generate actionable insights for stakeholders
-              </li>
-              <li>
-                Conducted market research on software tools for tracking and
-                analyzing crypto assets, recommending the most efficient
-                solutions
-              </li>
-              <li>
-                Developed detailed reports and visualizations to present data
-                findings, improving decision-making processes by 30%
-              </li>
-              <li>
-                Collaborated with cross-functional teams to enhance data
-                collection methods, increasing data accuracy by 20%
-              </li>
+              <li>Supported SEC’s MIDAS platform, refining backlog items tied to analysis of 1B+ equity exchange records.</li>
+              <li>Collaborated with compliance and engineering teams to define user stories for dashboards and visualization tools.</li>
+              <li>Researched and evaluated crypto compliance monitoring tools, influencing SEC Cyber Unit roadmap direction.</li>
             </ul>
           </div>
           <div class="bg-white p-8 rounded-lg shadow-sm">
             <div class="flex justify-between items-start mb-4">
               <div>
-                <h3 class="text-xl font-bold">Business Analyst</h3>
-                <p class="text-primary">Dovel Technologies</p>
+                <h3 class="text-xl font-bold">Business Analyst | Associate Product Owner</h3>
+                <p class="text-primary">Dovel Technologies, LLC</p>
               </div>
-              <span class="text-gray-500">Sep 2015 - Dec 2016</span>
+              <span class="text-gray-500">09/2015 – 12/2016</span>
             </div>
             <ul class="list-disc list-inside text-gray-600 space-y-2">
-              <li>
-                Led requirement gathering sessions with stakeholders to define 
-                and enhance existing product features
-              </li>
-              <li>
-                Analyzed data trends to identify key performance metrics and 
-                reporting needs post go-live / launch
-              </li>
-              <li>
-                Facilitated user acceptance training sessions for 
-                end-users and key stakeholders on new system functionality
-              </li>
-              <li>
-                Documented business processes and created 
-                user manuals to support system implementation and training efforts
-              </li>
+              <li>Supported Product Owner role for the Head Start Enterprise System (HSES) integration project.</li>
+              <li>Co-defined MVP scope for a $5M investment, delivering the core web-service interface before layering in advanced features.</li>
+              <li>Conducted requirement workshops, backlog grooming, and user testing sessions with OHS stakeholders.</li>
             </ul>
           </div>
         </div>
       </section>
-      </section>
+
       <section id="skills" class="py-20 px-20 bg-white">
         <h2 class="text-3xl font-bold mb-12 text-center">Skills</h2>
         <div class="grid grid-cols-2 gap-12 max-w-4xl mx-auto">
           <div>
-            <h3 class="text-xl font-bold mb-6">Technical Skills</h3>
+            <h3 class="text-xl font-bold mb-6">Technical</h3>
             <div class="space-y-6">
               <div>
-                <div class="flex justify-between mb-2">
-                  <span class="font-medium">Python / JavaScript</span>
-                  <span>95%</span>
-                </div>
-                <div class="h-2 bg-gray-200 rounded-full">
-                  <div
-                    class="h-full bg-primary rounded-full progress-bar"
-                    style="width: 95%"
-                  ></div>
-                </div>
+                <div class="flex justify-between mb-2"><span class="font-medium">Python / Ruby on Rails</span><span>80%</span></div>
+                <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 80%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2">
-                  <span class="font-medium">Artificial Intelligence</span>
-                  <span>90%</span>
-                </div>
-                <div class="h-2 bg-gray-200 rounded-full">
-                  <div
-                    class="h-full bg-primary rounded-full progress-bar"
-                    style="width: 90%"
-                  ></div>
-                </div>
+                <div class="flex justify-between mb-2"><span class="font-medium">Artificial Intelligence</span><span>90%</span></div>
+                <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 90%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2">
-                  <span class="font-medium">Data Analysis</span>
-                  <span>85%</span>
-                </div>
-                <div class="h-2 bg-gray-200 rounded-full">
-                  <div
-                    class="h-full bg-primary rounded-full progress-bar"
-                    style="width: 85%"
-                  ></div>
-                </div>
+                <div class="flex justify-between mb-2"><span class="font-medium">Data Analysis</span><span>85%</span></div>
+                <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 85%"></div></div>
               </div>
             </div>
           </div>
@@ -555,183 +232,67 @@
             <h3 class="text-xl font-bold mb-6">Soft Skills</h3>
             <div class="space-y-6">
               <div>
-                <div class="flex justify-between mb-2">
-                  <span class="font-medium">Public Speaking</span>
-                  <span>90%</span>
-                </div>
-                <div class="h-2 bg-gray-200 rounded-full">
-                  <div
-                    class="h-full bg-primary rounded-full progress-bar"
-                    style="width: 90%"
-                  ></div>
-                </div>
+                <div class="flex justify-between mb-2"><span class="font-medium">Public Speaking</span><span>90%</span></div>
+                <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 90%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2">
-                  <span class="font-medium">Teamwork</span>
-                  <span>100%</span>
-                </div>
-                <div class="h-2 bg-gray-200 rounded-full">
-                  <div
-                    class="h-full bg-primary rounded-full progress-bar"
-                    style="width: 100%"
-                  ></div>
-                </div>
+                <div class="flex justify-between mb-2"><span class="font-medium">Teamwork</span><span>100%</span></div>
+                <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 100%"></div></div>
               </div>
               <div>
-                <div class="flex justify-between mb-2">
-                  <span class="font-medium">Problem Solving</span>
-                  <span>88%</span>
-                </div>
-                <div class="h-2 bg-gray-200 rounded-full">
-                  <div
-                    class="h-full bg-primary rounded-full progress-bar"
-                    style="width: 88%"
-                  ></div>
-                </div>
+                <div class="flex justify-between mb-2"><span class="font-medium">Problem Solving</span><span>88%</span></div>
+                <div class="h-2 bg-gray-200 rounded-full"><div class="h-full bg-primary rounded-full progress-bar" style="width: 88%"></div></div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section id="contact" class="py-20 px-20 bg-gray-50">
-        <h2 class="text-3xl font-bold mb-12 text-center">Contact Me</h2>
-        <div class="grid grid-cols-2 gap-12 max-w-4xl mx-auto">
-          <div>
-            <div class="bg-white p-8 rounded-lg shadow-sm mb-8">
-              <div class="flex items-center gap-4 mb-6">
-                <div
-                  class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"
-                >
-                  <i class="ri-map-pin-line text-primary"></i>
-                </div>
-                <div>
-                  <h3 class="font-bold">Location</h3>
-                  <p class="text-gray-600">Raleigh-Durham</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-4 mb-6">
-                <div
-                  class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"
-                >
-                  <i class="ri-mail-line text-primary"></i>
-                </div>
-                <div>
-                  <h3 class="font-bold">Email</h3>
-                  <p class="text-gray-600">kmcneil757@gmail.com</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-4">
-                <div
-                  class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"
-                >
-                  <i class="ri-phone-line text-primary"></i>
-                </div>
-                <div>
-                  <h3 class="font-bold">Phone</h3>
-                  <p class="text-gray-600">757-719-3380</p>
-                </div>
+        <h2 class="text-3xl font-bold mb-12 text-center">Contact</h2>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 gap-12">
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"><i class="ri-map-pin-line text-primary"></i></div>
+              <div>
+                <h3 class="font-bold">Location</h3>
+                <p class="text-gray-600">Raleigh-Durham, North Carolina</p>
               </div>
             </div>
-            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-              <img
-                src="durham.jpg"
-                class="w-full h-48 object-cover"
-                alt="Location"
-              />
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"><i class="ri-mail-line text-primary"></i></div>
+              <div>
+                <h3 class="font-bold">Email</h3>
+                <p class="text-gray-600"><a href="mailto:kmcneil757@gmail.com" class="text-primary hover:underline">kmcneil757@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"><i class="ri-phone-line text-primary"></i></div>
+              <div>
+                <h3 class="font-bold">Phone</h3>
+                <p class="text-gray-600">757-719-3390</p>
+              </div>
             </div>
           </div>
-          <form action="https://formsubmit.co/kmcneil757@gmail.com" method="POST" class="bg-white p-8 rounded-lg shadow-sm" id="contactForm">
-            <input type="hidden" name="_captcha" value="false" />
-            <div class="mb-6">
-              <label class="block text-gray-700 mb-2" for="name"
-                >Your Name</label
-              >
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
-                required
-              />
-            </div>
-            <div class="mb-6">
-              <label class="block text-gray-700 mb-2" for="email"
-                >Your Email</label
-              >
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
-                required
-              />
-            </div>
-            <div class="mb-6">
-              <label class="block text-gray-700 mb-2" for="subject"
-                >Subject</label
-              >
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
-                required
-              />
-            </div>
-            <div class="mb-6">
-              <label class="block text-gray-700 mb-2" for="message"
-                >Message</label
-              >
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="w-full bg-primary text-white py-3 rounded-button hover:bg-blue-600 transition-colors"
-            >
-              Send Message
-            </button>
-          </form>
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="durham.jpg" class="w-full h-48 object-cover" alt="Durham" />
+          </div>
         </div>
       </section>
     </main>
-    <a
-      href="#"
-      id="backToTop"
-      class="fixed bottom-8 right-8 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer"
-    >
-      <i class="ri-arrow-up-line"></i>
-    </a>
+
+    <a href="#" id="backToTop" class="fixed bottom-8 right-8 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer"><i class="ri-arrow-up-line"></i></a>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const backToTop = document.getElementById("backToTop");
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 300) {
-            backToTop.style.opacity = "1";
-          } else {
-            backToTop.style.opacity = "0";
-          }
-        });
-        backToTop.addEventListener("click", (e) => {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
+        window.addEventListener("scroll", () => { backToTop.style.opacity = window.scrollY > 300 ? "1" : "0"; });
+        backToTop.addEventListener("click", (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
           anchor.addEventListener("click", function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-              behavior: "smooth",
-            });
+            document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
           });
         });
-        // The contact form posts directly to FormSubmit which handles emailing
-        // the provided information to kmcneil757@gmail.com.
       });
     </script>
   </body>
